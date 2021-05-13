@@ -19,7 +19,7 @@ function salvarForm() {
     }
 }
 if(window.localStorage.length <= 0){
-    alert("Olá bem-vindo \n após enviar reiniciar a pagina")
+    alert("Olá bem-vindo")
 }
 else{
 for (var cont = 1; cont <= localStorage.cont; cont++) {
