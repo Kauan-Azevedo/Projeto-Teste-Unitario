@@ -1,29 +1,17 @@
-var usuarios = new Array();
-
-function salvarLocal() {
-    var idI = Math.floor(Math.random() * 1000001);
-    var nomeI = document.getElementById("nome").value;
-    var emailI = document.getElementById("email").value;
-
-    var usuariosJSON = JSON.parse(localStorage.getItem('usuario'))
-    if (usuariosJSON != null) {
-        usuarios = usuariosJSON;
-        usuarios.push({
-            id: idI,
-            nome: nomeI,
-            email: emailI
-        });
-        localStorage.setItem("usuario", JSON.stringify(usuarios))
-    } else {
-        usuarios.push({
-            id: idI,
-            nome: nomeI,
-            email: emailI
-        });
-        localStorage.setItem("usuario", JSON.stringify(usuarios));
+function salvarForm() {
+    if (typeof (Storage) !== "undefined") {
+        if (localStorage.cont) {
+            localStorage.cont = Number(localStorage.cont) + 1;
+        } else {
+            localStorage.cont = 1;
+        }
+        var cad = document.getElementById('nome').value + " ; " + document.getElementById('email').value;
+        localStorage.setItem("usuario" + localStorage.cont, cad)
     }
+    document.getElementById("nome").value = "";
+    document.getElementById("email").value = "";
 }
-
-function usuCadastros() {
-    var y = JSON.parse()
+for (var cont = 1; cont <= localStorage.cont; cont++) {
+    var salvos = localStorage.getItem("usuario" + cont);
+    document.getElementById("cadastros-sus").innerHTML += "Nome: " + salvos.split(";")[0] + ", " + "Email: " + salvos.split(";")[1] + "<br>";
 }
