@@ -1,51 +1,70 @@
 body {
-    background-color: rgb(230, 238, 238);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Cambria;
+    background-size: 100%;
+    background: linear-gradient(purple, rgb(41, 1, 41));
+    background-repeat: no-repeat;
+    height: 200rem;
+    overflow-y: hidden;
 }
 
 h1 {
     text-align: center;
     margin-top: 40px;
+    padding: 10px;
 }
 
 .form-teste {
-    border: 1px solid rgb(77, 77, 77);
     background-color: white;
-    border-radius: 5px;
     height: auto;
     text-align: center;
     display: block;
     max-width: 400px;
-    margin-left: 5rem;
-    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 7px;
 }
 
-#email, #nome {
-    background-color: rgb(230, 238, 238);
-    border-radius: 50px;
+#email,
+#nome {
+    width: 90%;
+    height: 30px;
+    border-radius: 7px;
+    border: 1px solid purple;
     padding: 3px;
     outline: none;
+    transition: all 250ms;
+    font-size: 15px;
+}
+
+::placeholder {
+    color: rgb(43, 43, 43);
 }
 
 button {
+    width: 200px;
+    height: 35px;
     margin-top: 20px;
-    border-radius: 50px;
-    border: 1px rgb(87, 87, 240) solid;
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    border-radius: 7px;
+    border: none;
+    padding: auto;
     outline: none;
     transition: 0.4s;
-    font-style: bold;
-    
+    background-color: purple;
+    color: white;
+    font: bold;
+
 }
 
 button:hover {
     background-color: white;
-    font-style: bold;
+    border: 1px solid purple;
+    color: black;
+    font: bold;
 }
 
 .form-footer {
     margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 7px;
 }
