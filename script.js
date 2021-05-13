@@ -17,6 +17,7 @@ function salvarForm() {
         document.getElementById("nome").value = "";
         document.getElementById("email").value = "";
     }
+    location.reload();
 }
 if(window.localStorage.length <= 0){
     alert("Olá bem-vindo")
